@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui/datepicker
+
 //= require underscore
 //= require bootstrap
 //= require chart
 //= require_tree ./templates
 //= require result-chart
+//= require materialize

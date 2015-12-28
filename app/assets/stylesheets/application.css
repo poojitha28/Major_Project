@@ -10,6 +10,8 @@
  *
  *= require_self
  *= require bootstrap-overrides
+  *= require jquery-ui
+  *= require jquery-ui/datepicker 
  */
 
 .horizontal-list {

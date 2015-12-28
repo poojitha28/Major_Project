@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   # this method will be used by rapidfire to determine whether current user
   # can manage questions or not.
   def can_administer?
+    current_user.try(:email) == "pooja28.maganti@gmail.com"
     current_user.try(:email) == "admin@example.com"
   end
 
