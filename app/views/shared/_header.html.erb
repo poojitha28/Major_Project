@@ -1,0 +1,28 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Major Project</a>
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+        <span class="glyphicon glyphicon-bar"></span>
+        <span class="glyphicon glyphicon-bar"></span>
+        <span class="glyphicon glyphicon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse pull-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to "Surveys", rapidfire.question_groups_path %>
+        </li>
+        <% if current_user %>
+          <li>
+            <%= link_to "Logout", main_app.session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Login", main_app.new_session_path %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
