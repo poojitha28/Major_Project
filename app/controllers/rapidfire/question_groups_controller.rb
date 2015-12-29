@@ -14,7 +14,7 @@ module Rapidfire
       @question_group = QuestionGroup.new(question_group_params)
       if @question_group.save
         respond_to do |format|
-          format.html { redirect_to question_groups_path }
+          format.html { redirect_to question_group_questions_path(@question_group.id) }
           format.js
         end
       else
@@ -50,11 +50,7 @@ module Rapidfire
     private
 
     def question_group_params
-      if Rails::VERSION::MAJOR == 4
         params.require(:question_group).permit(:name)
-      else
-        params[:question_group]
-      end
     end
   end
 end
