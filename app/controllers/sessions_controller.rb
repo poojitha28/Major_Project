@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(create_params[:password])
       session[:user_id] = User.first.id
-      redirect_to rapidfire.root_path
+      redirect_to root_path
     else
       render :new
     end

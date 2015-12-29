@@ -10,10 +10,12 @@
     </div>
     <div class="navbar-collapse collapse pull-right">
       <ul class="nav navbar-nav">
-        <li>
-          <%= link_to "Surveys", rapidfire.question_groups_path %>
-        </li>
         <% if current_user %>
+         <% if can_administer? %>
+          <li>
+           <%= link_to "New Survey", rapidfire.new_question_group_path %>
+          </li>
+         <% end %>
           <li>
             <%= link_to "Logout", main_app.session_path, method: :delete %>
           </li>
