@@ -1,0 +1,8 @@
+<h3>
+  <%= question_group.new_record? ? "New Survey" : "Edit Survey" %>
+</h3>
+<%= simple_form_for question_group do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category, collection: ["1st sem","2nd sem","3rd sem","4th sem","5th sem","6th sem","7th sem","8th sem","B.Tech","M.Tech"], label: "Category", prompt: "Please select" %>
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

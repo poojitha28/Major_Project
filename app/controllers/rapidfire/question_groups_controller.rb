@@ -1,9 +1,11 @@
 module Rapidfire
   class QuestionGroupsController < Rapidfire::ApplicationController
-    before_filter :authenticate_administrator!, except: :index
-
+    before_filter :authenticate_administrator!, except: [ :index, :show]
+     def show
+      @question_groups = QuestionGroup.where(category: params[:cat_id])
+    end
     def index
-      @question_groups = QuestionGroup.all
+     
     end
 
     def new
@@ -50,7 +52,7 @@ module Rapidfire
     private
 
     def question_group_params
-        params.require(:question_group).permit(:name)
+        params.require(:question_group).permit(:name, :category)
     end
   end
 end

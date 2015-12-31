@@ -1,0 +1,12 @@
+%hr
+
+%table.table.table-striped.table-bordered
+  %colgroup
+    %col
+    %col{ width: "45%" }
+  %thead
+    %tr
+      %th Survey
+      %th
+  %tbody
+    = render partial: "question_group", collection: @question_groups

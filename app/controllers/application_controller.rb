@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   # can manage questions or not.
   def can_administer?
     current_user.try(:email) == "pooja28.maganti@gmail.com"
-    current_user.try(:email) == "admin@example.com"
+    current_user.try(:email) == "snehag.rsn@gmail.com"
+     current_user.try(:email) == "admin@example.com"
   end
 
   # current user
