@@ -8,9 +8,13 @@ module Rapidfire
 
     def create
       @answer_group_builder = AnswerGroupBuilder.new(answer_group_params)
-
+      id = @question_group.category
       if @answer_group_builder.save
-        redirect_to survey_show_path(@question_group.category)
+        if id == "B.Tech" or "M.Tech"
+           redirect_to "/program"
+        else
+          redirect_to "/course/#{id}"
+       end
       else
         render :new
       end

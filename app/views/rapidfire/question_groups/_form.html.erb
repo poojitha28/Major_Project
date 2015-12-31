@@ -3,6 +3,6 @@
 </h3>
 <%= simple_form_for question_group do |f| %>
   <%= f.input :name %>
-  <%= f.input :category, collection: ["1st sem","2nd sem","3rd sem","4th sem","5th sem","6th sem","7th sem","8th sem","B.Tech","M.Tech"], label: "Category", prompt: "Please select" %>
+  <%= f.input :category, collection: [ ["1st Semester","1-1"],["2nd Semester","1-2"],["3rd Semester","2-1"],["4th Semester","2-2"],["5th Semester","3-1"],["6th Semester","3-2"],["7th Semester","4-1"],["8th Semester","4-2"],["B.Tech","B.Tech"],["M.Tech","M.Tech"] ], label: "Category", prompt: "Please select" %>
   <%= f.submit "Save", class: "btn btn-primary" %>
 <% end %>

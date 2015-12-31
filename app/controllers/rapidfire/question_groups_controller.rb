@@ -1,8 +1,11 @@
 module Rapidfire
   class QuestionGroupsController < Rapidfire::ApplicationController
-    before_filter :authenticate_administrator!, except: [ :index, :show]
-     def show
+    before_filter :authenticate_administrator!, except: [ :index, :view, :program]
+     def view
       @question_groups = QuestionGroup.where(category: params[:cat_id])
+    end
+    def program
+      @question_groups = QuestionGroup.where(category: ["M.Tech","B.Tech"])
     end
     def index
      
