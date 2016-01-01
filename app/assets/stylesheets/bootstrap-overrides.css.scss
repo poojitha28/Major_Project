@@ -67,3 +67,10 @@ table a:not(.btn),
 th h3{
   margin-top: 1px;
 }
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
