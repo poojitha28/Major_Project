@@ -73,4 +73,57 @@ th h3{
     {
         display: none !important;
     }
+    @page {
+    margin-top: -50px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
 }
+}
+@media only screen and (min-width : 250px) and (max-width : 480px) {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+			height: auto;
+			width: 100%;
+	}
+		.home{
+	  	margin-top: 10px;
+	}
+	.home-res
+	{
+	  margin-top: 10px;
+	}
+}
+@media only screen and (min-width : 480px) and (max-width : 992px) {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+			height: 400px;
+			width: 100%;
+			margin-bottom: -15px;
+	}
+	.home{
+	  	margin-top: 15px;
+	}
+	.carousel
+	{
+	  margin-bottom: 15px;
+	}
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    width: 970px;
+  }
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+			height: 475px;
+			width: 100%;
+		
+	}
+	.home{
+	  	margin-top: 20px;
+	}
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 1170px;
+  }
+}
+
