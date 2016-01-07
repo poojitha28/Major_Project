@@ -44,7 +44,7 @@ module Rapidfire
       @question_group = QuestionGroup.find(params[:id])
       @question_group_results =
         QuestionGroupResults.new(question_group: @question_group).extract
-
+      @id = @question_group.category
       respond_to do |format|
         format.json { render json: @question_group_results, root: false }
         format.html

@@ -1,3 +1,17 @@
+<% if @id == "B.Tech" or @id == "M.Tech" %>
+ <ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><a href="/program">Program</a></li>
+  <li class="active">Results</li>
+ </ol>
+<% else %>
+  <ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><a href="/course">Course</a></li>
+  <li><a href="/course/<%= @id %>">Survey</a></li>
+  <li class="active">Results</li>
+ </ol>
+<% end %>
 <h1><%= @question_group.name %> Survey Results</h1>
 <ul class="nav nav-tabs no-print">
   <li class="active">
