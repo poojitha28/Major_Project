@@ -92,6 +92,9 @@ th h3{
 	{
 	  margin-top: 10px;
 	}
+	.course{
+	  margin-top: 10px
+	}
 }
 @media only screen and (min-width : 480px) and (max-width : 992px) {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img{
@@ -109,9 +112,6 @@ th h3{
 }
 
 @media (min-width: 992px) {
-  .container-fluid {
-    width: 970px;
-  }
   .carousel-inner > .item > img, .carousel-inner > .item > a > img{
 			height: 475px;
 			width: 100%;
