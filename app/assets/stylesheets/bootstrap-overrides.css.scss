@@ -119,6 +119,9 @@ th h3{
 	.home{
 	  	margin-top: 20px;
 	}
+	.course{
+	  margin-top: 10px
+	}
 }
 @media (min-width: 1200px) {
   .container-fluid {
@@ -127,4 +130,9 @@ th h3{
 }
 img{
   	width: 100%;
+}
+.breadcrumb {
+  background-color: #fff;
+  font-size: large;
+  margin-top: 10px;
 }
