@@ -10,7 +10,8 @@
  *
  *= require_self
  *= require bootstrap-overrides
-  *= require header-override
+ *= require header-override
+ *= require breadcrumbs-overrides
   *= require jquery-ui
   *= require jquery-ui/datepicker 
  */
