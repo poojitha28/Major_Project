@@ -1,9 +1,17 @@
-<div class="breadcrumb flat">
+<% if @id == "B.Tech" or @id == "M.Tech" %>
+<div class="breadcrumb flat no-print">
+  <a href="/">Home</a></li>
+  <a href="/program">Program</a></li>
+  <a href="#" class="active">Questions</a>
+</div>
+<% else %>
+  <div class="breadcrumb flat">
     <a href="/">Home</a>
     <a href="/course">Course</a>
     <a href="/course/<%= @question_group.category %>">Survey</a>
   <a href="#" class="active">Questions</a>
 </div>
+<% end %>
 
 <h2>
   <%= @question_group.name %> Survey Questions

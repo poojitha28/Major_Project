@@ -1,4 +1,11 @@
-%div.breadcrumb.flat
+-if @id == "B.Tech" or @id == "M.Tech"
+  %div.breadcrumb.flat
+    %a{:href => "/"} Home
+    %a{:href => "/program"} Program
+    = link_to "Questions", question_group_questions_path(@question_group)
+    %a.active{:href => "#"} Edit
+-else
+  %div.breadcrumb.flat
     %a{:href => "/"} Home
     %a{:href => "/course"} Course
     %a{:href => "/course/#{@question_group.category}"} Survey

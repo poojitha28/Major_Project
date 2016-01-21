@@ -58,6 +58,7 @@ module Rapidfire
 
     def find_question_group!
       @question_group = QuestionGroup.find(params[:question_group_id])
+      @id = @question_group.category
     end
 
     def find_question!
