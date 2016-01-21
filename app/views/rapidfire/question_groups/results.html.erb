@@ -1,11 +1,11 @@
 <% if @id == "B.Tech" or @id == "M.Tech" %>
-<div class="breadcrumb flat">
+<div class="breadcrumb flat no-print">
   <a href="/">Home</a></li>
   <a href="/program">Program</a></li>
   <a href="#" class="active">Results</a>
 </div>
 <% else %>
-  <div class="breadcrumb flat">
+  <div class="breadcrumb flat no-print">
   <a href="/">Home</a></li>
   <a href="/course">Course</a>
   <a href="/course/<%= @id %>">Survey</a>
@@ -24,8 +24,6 @@
 <div class="tab-content">
   <div class="tab-pane active" id="json-results">
     <%= render partial: "json_results", locals: { question_group: @question_group } %>
-    <span class="no-print">
-    <button onclick="window.print();" class="btn btn-primary">Show Pdf</button></span>
   </div>
   <div class="tab-pane" id="html-results">
     <%= render partial: "html_results", locals: { results: @question_group_results } %>
