@@ -1,16 +1,16 @@
 <% if @id == "B.Tech" or @id == "M.Tech" %>
- <ol class="breadcrumb">
-  <li><a href="/">Home</a></li>
-  <li><a href="/program">Program</a></li>
-  <li class="active">Results</li>
- </ol>
+<div class="breadcrumb flat">
+  <a href="/">Home</a></li>
+  <a href="/program">Program</a></li>
+  <a href="#" class="active">Results</a>
+</div>
 <% else %>
-  <ol class="breadcrumb">
-  <li><a href="/">Home</a></li>
-  <li><a href="/course">Course</a></li>
-  <li><a href="/course/<%= @id %>">Survey</a></li>
-  <li class="active">Results</li>
- </ol>
+  <div class="breadcrumb flat">
+  <a href="/">Home</a></li>
+  <a href="/course">Course</a>
+  <a href="/course/<%= @id %>">Survey</a>
+  <a href="#" class="active">Results</a>
+ </div>
 <% end %>
 <h1><%= @question_group.name %> Survey Results</h1>
 <ul class="nav nav-tabs no-print">

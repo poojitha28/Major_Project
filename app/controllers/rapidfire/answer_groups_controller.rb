@@ -3,6 +3,7 @@ module Rapidfire
     before_filter :find_question_group!
 
     def new
+      @id = @question_group.category
       @answer_group_builder = AnswerGroupBuilder.new(answer_group_params)
     end
 

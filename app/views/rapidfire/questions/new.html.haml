@@ -1,13 +1,9 @@
-%ol.breadcrumb
-  %li
+%div.breadcrumb.flat
     %a{:href => "/"} Home
-  %li
     %a{:href => "/course"} Course
-  %li
     %a{:href => "/course/#{@question_group.category}"} Survey
-  %li
     = link_to "Questions", question_group_questions_path(@question_group)
-  %li.active New
+    %a.active{:href => "#"} New
 = render partial: 'form',
   locals: { form: @question_form, url: question_group_questions_path(@question_group),
     method: :post, submit_text: 'Create Question' }
