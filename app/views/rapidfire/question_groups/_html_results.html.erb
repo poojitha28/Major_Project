@@ -21,9 +21,12 @@
             <tr>
               <th>Option</th>
               <th>Count</th>
+              <th>Percentage</th>
             </tr>
           </thead>
           <tbody>
+            <% sum=0 %>
+            <% result.results.each {|option,count| sum += count.to_i} %>
             <% result.results.each do |option, count| %>
               <tr>
                 <td>
@@ -31,6 +34,9 @@
                 </td>
                 <td>
                   <%= count %>
+                </td>
+                <td>
+                  <%= (count *100) / sum %><%="%" %>
                 </td>
               </tr>
             <% end %>
