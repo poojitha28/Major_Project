@@ -10,7 +10,11 @@
     <ul class="horizontal-list">
       <% if ! can_administer? %>
       <li>
-        <%= link_to "Take this survey", new_question_group_answer_group_path(question_group), class: "btn btn-primary"%>
+        <% if ! question_group.questions.empty? %>
+          <%= link_to "Take this survey", new_question_group_answer_group_path(question_group), class: "btn btn-primary"%>
+        <% else %>
+          <%= link_to "Take this survey", new_question_group_answer_group_path(question_group), :disabled => true, class: "btn btn-primary"%>
+        <% end %>
       </li>
       <% else %>
         <li>
