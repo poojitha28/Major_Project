@@ -18,6 +18,7 @@ module Rapidfire
     def create
       @question_group = QuestionGroup.new(question_group_params)
       if @question_group.save
+        flash[:notice] = "Survey Created Successfully"
         respond_to do |format|
           format.html { redirect_to question_group_questions_path(@question_group.id) }
           format.js
@@ -33,7 +34,6 @@ module Rapidfire
     def destroy
       @question_group = QuestionGroup.find(params[:id])
       @question_group.destroy
-
       respond_to do |format|
         format.html { redirect_to question_groups_path }
         format.js

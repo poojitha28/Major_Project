@@ -25,7 +25,6 @@ module Rapidfire
 
     def update
       form_params = params[:question].merge(:question => @question)
-
       save_and_redirect(form_params, :edit)
     end
 
@@ -42,7 +41,7 @@ module Rapidfire
     def save_and_redirect(params, on_error_key)
       @question_form = QuestionForm.new(params)
       @question_form.save
-
+      flash[:notice] = "Question Updated Successfully"
       if @question_form.errors.empty?
         respond_to do |format|
           format.html { redirect_to index_location }

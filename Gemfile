@@ -10,7 +10,6 @@ gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'jquery-rails'
-# gem 'turbolinks'
 gem 'jquery-ui-rails'
 gem 'haml-rails'
 gem 'rapidfire'
@@ -19,7 +18,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'bootswatch-rails'
 gem 'ejs'
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 group :development do
   gem 'pry-remote', '~> 0.1.7'
   gem 'quiet_assets'

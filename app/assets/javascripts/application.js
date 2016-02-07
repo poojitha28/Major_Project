@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require jquery-ui/datepicker
-
+//= require data-confirm-modal
 //= require underscore
 //= require bootstrap
 //= require chart
