@@ -11,6 +11,7 @@ module Rapidfire
       @answer_group_builder = AnswerGroupBuilder.new(answer_group_params)
       id = @question_group.category
       if @answer_group_builder.save
+        flash[:notice] = "Your Responses has been Recorded Successfully"
         if id == "B.Tech" or id == "M.Tech"
            redirect_to "/program"
         else

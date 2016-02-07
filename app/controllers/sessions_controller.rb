@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(create_params[:password])
       session[:user_id] = User.first.id
+      flash[:notice] = "Signed In Successfully"
       redirect_to root_path
     else
       render :new
@@ -15,6 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
+    flash[:notice] = "Signed out Successfully"
     redirect_to root_path
   end
 
