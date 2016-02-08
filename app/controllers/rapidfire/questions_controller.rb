@@ -31,6 +31,7 @@ module Rapidfire
 
     def destroy
       @question.destroy
+      flash[:notice] = "Question Destroyed Successfully"
       respond_to do |format|
         format.html { redirect_to index_location }
         format.js

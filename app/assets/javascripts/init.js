@@ -1,8 +1,8 @@
  $(document).ready(function(){
-   setTimeout(function(){
-  alert("Boom!");
-  }, 1000);
+   $('.carousel').carousel({
+  interval: 4000
+  });
    setTimeout(function() {
     $('.alert').slideUp();
-  }, 1200);
+  }, 4000);
   });

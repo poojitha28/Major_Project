@@ -10,13 +10,14 @@ class SessionsController < ApplicationController
       flash[:notice] = "Signed In Successfully"
       redirect_to root_path
     else
+      flash[:danger] = "Administrator Permissions Denied"
       render :new
     end
   end
 
   def destroy
     session.delete(:user_id)
-    flash[:notice] = "Signed out Successfully"
+    flash[:notice] = "Signed Out Successfully"
     redirect_to root_path
   end
 

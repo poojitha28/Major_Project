@@ -20,3 +20,4 @@
 //= require chart
 //= require_tree ./templates
 //= require result-chart
+//= require_tree .
