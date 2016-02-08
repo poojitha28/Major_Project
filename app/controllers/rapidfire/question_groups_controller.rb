@@ -39,7 +39,7 @@ module Rapidfire
         format.js
       end
     end
-
+    
     def results
       @question_group = QuestionGroup.find(params[:id])
       @question_group_results = QuestionGroupResults.new(question_group: @question_group).extract
