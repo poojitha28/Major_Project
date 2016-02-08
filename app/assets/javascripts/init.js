@@ -4,5 +4,5 @@
   });
    setTimeout(function() {
     $('.alert').slideUp();
-  }, 4000);
+  }, 6000);
   });
