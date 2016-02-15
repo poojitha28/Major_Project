@@ -73,12 +73,13 @@ th h3{
     {
         display: none !important;
     }
-    @page {
-    margin-top: -50px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-}
+  h3{
+  	margin-top: -48px;
+  }
+  hr{
+  	margin-bottom: -3px;
+  	margin-top: -3px;
+  }
 }
 img{
   	width: 100%;

@@ -13,8 +13,8 @@
  *= require header-override
  *= require breadcrumbs-overrides
  *= require elements
-  *= require jquery-ui
-  *= require jquery-ui/datepicker 
+ *= require jquery-ui
+ *= require jquery-ui/datepicker 
  */
 
 .horizontal-list {

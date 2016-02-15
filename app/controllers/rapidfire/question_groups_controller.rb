@@ -1,7 +1,7 @@
 module Rapidfire
   class QuestionGroupsController < Rapidfire::ApplicationController
     before_filter :authenticate_administrator!, except: [ :index, :view, :program]
-     def view
+    def view
       @question_groups = QuestionGroup.where(category: params[:cat_id])
     end
     def program
