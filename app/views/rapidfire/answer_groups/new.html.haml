@@ -1,12 +1,12 @@
 -if @id == "B.Tech" or @id == "M.Tech"
   %div.breadcrumb.flat
-    %a{:href => "/"} Home
-    %a{:href => "/program"} Program
+    %a{:href => "#"} Home
+    %a{:href => "#"} Program
     %a.active{:href => "#"} Survey Response
 -else
   %div.breadcrumb.flat
-    %a{:href => "/"} Home
-    %a{:href => "/course"} Course
+    %a{:href => "#"} Home
+    %a{:href => "#"} Course
     %a{:href => "/course/#{@question_group.category}"} Survey
     %a.active{:href => "#"} Survey Response
 %h2 Please answer these Questions
