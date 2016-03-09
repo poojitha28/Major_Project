@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231051144) do
+ActiveRecord::Schema.define(version: 20160309085508) do
 
   create_table "rapidfire_answer_groups", force: :cascade do |t|
     t.integer  "question_group_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20151231051144) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category"
+    t.string   "academic_year"
   end
 
   create_table "rapidfire_questions", force: :cascade do |t|

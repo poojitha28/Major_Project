@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   def can_administer?
     current_user.try(:email) == "pooja28.maganti@gmail.com"
     current_user.try(:email) == "snehag.rsn@gmail.com"
-     current_user.try(:email) == "admin@example.com"
+    current_user.try(:email) == "alekhyapolavarapu@gmail.com"
+    current_user.try(:email) == "admin@example.com"
   end
 
   # current user

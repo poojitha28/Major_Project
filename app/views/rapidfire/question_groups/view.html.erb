@@ -1,8 +1,16 @@
-<div class="breadcrumb flat">
+<% if ! can_administer? %>
+ <div class="breadcrumb flat">
+  <a href="#">Home</a></li>
+  <a href="#">Course</a>
+  <a href="#" class="active">Survey</a>
+ </div>
+<% else %>
+  <div class="breadcrumb flat">
   <a href="/">Home</a></li>
   <a href="/course">Course</a>
   <a href="#" class="active">Survey</a>
  </div>
+<% end %>
 <hr/>
 <table class="table table-striped table-bordered">
   <colgroup>
