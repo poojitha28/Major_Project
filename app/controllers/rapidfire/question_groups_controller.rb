@@ -54,7 +54,7 @@ module Rapidfire
     private
 
     def question_group_params
-        params.require(:question_group).permit(:name, :category)
+        params.require(:question_group).permit(:name, :category, :academic_year)
     end
   end
 end

@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-fixed-top no-print">
   <div class="container-fluid">
     <div class="navbar-header">
-    <% if can_administer? %>
+    <% if current_user && can_administer? %>
       <a class="navbar-brand" href="/">Program Assessment-Survey</a>
     <% else %>
       <a class="navbar-brand" href="#">Program Assessment-Survey</a>
